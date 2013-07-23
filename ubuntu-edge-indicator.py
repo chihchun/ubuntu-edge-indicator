@@ -14,7 +14,7 @@ def update(*args):
     # screen scraping of glory
     fp = urllib.urlopen('http://www.indiegogo.com/projects/ubuntu-edge')
     data = fp.read()
-    mtch = [x for x in data.split('\n') if '$2,' in x and 'amount' in x and 'medium' in x]
+    mtch = [x for x in data.split('\n') if '$,' in x and 'amount' in x and 'medium' in x]
     if len(mtch) != 1:
         ind.set_label("?????", "$32.00m")
         return True
